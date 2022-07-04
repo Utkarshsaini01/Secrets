@@ -1,4 +1,3 @@
-
 require('dotenv').config();
 
 const express = require("express");
@@ -35,7 +34,7 @@ app.use(passport.session());
 
 
 
-mongoose.connect("mongodb+srv://sainiutkarsh01:Utkarsh2020@cluster0.ofulu7w.mongodb.net/userDB", {useNewUrlparser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://"+ process.env.DB, {useNewUrlparser: true, useUnifiedTopology: true});
 
 const userSchema = new mongoose.Schema ({
   email: String,
