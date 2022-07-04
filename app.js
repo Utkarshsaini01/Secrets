@@ -69,7 +69,7 @@ passport.deserializeUser(function(user, cb) {
 passport.use(new GoogleStrategy({
     clientID:     process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/secrets",
+    callbackURL: "https://rugged-cuyahoga-valley-99210.herokuapp.com/auth/google/secrets",
     passReqToCallback: true
   },
   function(request, accessToken, refreshToken, profile, done) {
